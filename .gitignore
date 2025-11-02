@@ -7,8 +7,9 @@
 # Track this file
 !.gitignore
 
-# Track our config folders
+# Track config
 !.config/niri/**
 !.config/waybar/**
 !.config/wofi/**
 !.config/swaync/**
+!theming/**
