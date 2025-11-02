@@ -1,0 +1,158 @@
+// https://github.com/YaLTeR/niri/wiki/Configuration:-Introduction
+
+spawn-at-startup "xdg-desktop-portal"
+spawn-at-startup "xdg-desktop-portal-gnome"
+
+prefer-no-csd // Disable Client-Side Decorations
+
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.pn,˙• g"
+
+input {
+    keyboard {
+        xkb {}
+        numlock
+    }
+    touchpad {
+        // off
+        tap
+        // dwt
+        // dwtp
+        // drag false
+        // drag-lock
+        natural-scroll
+        // accel-speed 0.2
+        // accel-profile "flat"
+        // scroll-method "two-finger"
+        // disabled-on-external-mouse
+    }
+    mouse {
+         accel-profile "flat"
+    }
+}
+output "HDMI-A-1" {
+    mode "1920x1080@74.949"
+    background-color "#1D1B20"
+    scale 1
+    transform "normal"
+    position x=0 y=0
+}
+cursor {
+    xcursor-theme "Bibata-Modern-Classic"
+    xcursor-size 20
+}
+layout {
+    gaps 8 // gaps around windows.
+    center-focused-column "never"
+    preset-column-widths { // Widths that "switch-preset-column-width" toggles between.
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+        // fixed 1920
+    }
+
+    default-column-width { proportion 0.5; } // Default width of new windows (empty = windows decide)
+
+    focus-ring {
+        off
+    }
+
+    border {
+        // off
+        width 2
+        active-color "#D0BCFF"
+        inactive-color "#505050"
+        urgent-color "#9b0000" // Border around urgent windows.
+    }
+
+}
+animations {
+    // off
+    // slowdown 3.0
+}
+
+window-rule { // Open the Firefox picture-in-picture player as floating by default.
+    // This app-id regular expression will work for both:
+    // - host Firefox (app-id is "firefox")
+    // - Flatpak Firefox (app-id is "org.mozilla.firefox")
+    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    open-floating true
+}
+/-window-rule { // Example: block out two password managers from screen capture.
+    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
+    match app-id=r#"^org\.gnome\.World\.Secrets$"#
+    block-out-from "screen-capture"
+    // block-out-from "screencast" // Use this instead if you want them visible on third-party screenshot tools.
+}
+window-rule { // Corner Radius
+    geometry-corner-radius 9
+    clip-to-geometry true
+}
+overview {
+    zoom 0.75
+    backdrop-color "#0F0D13"
+}
+binds {
+    Mod+Shift+Slash { show-hotkey-overlay; } // important hotkeys.
+
+    Mod+R hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
+    Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
+
+    Mod+Tab repeat=false { toggle-overview; } // Open/close the Overview
+
+    Mod+Q { close-window; }
+
+    Mod+Left  { focus-column-left; }
+    Mod+Down  { focus-window-down; }
+    Mod+Up    { focus-window-up; }
+    Mod+Right { focus-column-right; }
+
+    Mod+Ctrl+Left  { move-column-left; }
+    Mod+Ctrl+Down  { move-window-down; }
+    Mod+Ctrl+Up    { move-window-up; }
+    Mod+Ctrl+Right { move-column-right; }
+
+    Mod+Page_Down      { focus-workspace-down; }
+    Mod+Page_Up        { focus-workspace-up; }
+    Mod+Ctrl+Page_Down { move-column-to-workspace-down; }
+    Mod+Ctrl+Page_Up   { move-column-to-workspace-up; }
+    Mod+Ctrl+U         { move-column-to-workspace-down; }
+    Mod+Ctrl+I         { move-column-to-workspace-up; }
+
+    Mod+Shift+Page_Down { move-workspace-down; }
+    Mod+Shift+Page_Up   { move-workspace-up; }
+
+    Mod+WheelScrollDown      cooldown-ms=150 { focus-workspace-down; }
+    Mod+WheelScrollUp        cooldown-ms=150 { focus-workspace-up; }
+
+    Mod+Shift+WheelScrollDown      { focus-column-right; }
+    Mod+Shift+WheelScrollUp        { focus-column-left; }
+    Mod+Ctrl+WheelScrollDown { move-column-right; }
+    Mod+Ctrl+WheelScrollUp   { move-column-left; }
+
+    Mod+BracketLeft  { consume-or-expel-window-left; }
+    Mod+BracketRight { consume-or-expel-window-right; }
+    Mod+Comma  { consume-window-into-column; } // Consume one window from the right to the bottom of the focused column.
+    Mod+Period { expel-window-from-column; } // Expel the bottom window from the focused column to the right.
+
+    Mod+Shift+R { switch-preset-window-height; }
+    Mod+Ctrl+R { reset-window-height; }
+    Mod+F { maximize-column; }
+    Mod+Shift+F { fullscreen-window; }
+
+    Mod+C { center-column; }
+
+    Mod+Minus { set-column-width "-10%"; }
+    Mod+Equal { set-column-width "+10%"; }
+
+    Mod+V       { toggle-window-floating; } // Toggle floating windows
+    Mod+Shift+V { switch-focus-between-floating-and-tiling; }
+
+    Mod+T { toggle-column-tabbed-display; } // Toggle tabbed column display mode.
+
+    F4 { screenshot; }
+    Print { screenshot-screen; }
+    Alt+Print { screenshot-window; }
+
+    Mod+Shift+E { quit; }
+    Ctrl+Alt+Delete { quit; }
+}

@@ -1,0 +1,113 @@
+{
+/* General config */
+  "layer": "top",
+  "position": "top",
+  "height": 30,
+  "margin-top": 0,
+  "margin-right": 0,
+  "margin-left": 0,
+  "reload_style_on_change": true,
+
+/* Module Placement */
+  "modules-left": ["clock", "custom/calendar"],
+  "modules-center": ["mpris"],
+  "modules-right": ["network", "pulseaudio", "tray", "custom/notification"],
+
+
+/* App launcher / Taskbar Modules */
+ "custom/rofi": {
+	"format": "Run",
+	"on-click": "wofi --show drun"
+  },
+    "window": {
+        "format": "{}",
+        "max-length": 80,
+        "tooltip": true,
+        "tooltip-format": "{}"
+    },
+  "niri/workspaces": {
+    "on-click": "activate"
+  },
+
+  "wlr/taskbar": {
+    "format": "{icon} {app_id}",
+    "icon-size": 16,
+    "on-click": "minimize-raise"
+  },
+
+/* Network Waybar Module */
+  "network": {
+	"interval": 1,
+  "format-disconnected": "lf network",
+  "tooltip-format-ethernet": "󰈀   Ethernet\nIP: {ipaddr}",
+	"format-ethernet": "󰕒  {bandwidthUpBytes}  󰇚  {bandwidthDownBytes}",
+	"on-click-right-release": "nm-connection-editor"
+  },
+
+/* Media Waybar Modules */
+  "pulseaudio": {
+    "format": "󰕾  {volume}",
+    "on-click": "pavucontrol"
+  },
+
+/* Clock Module */
+  "clock": {
+    "format": "{:%I:%M %p}"
+    },
+
+    "custom/calendar": {
+        "exec": "date '+%a, %b %d'",
+        "interval": 60
+    },
+
+/* System Tray Module */
+  "tray": {
+    "icon-size": 14,
+    "spacing": 5,
+	"show-passive-items": true
+  },
+
+  "cpu": {
+      "format": "CPU: {usage}%",
+      "interval": 2
+  },
+
+      // Basic GPU config (requires a custom script to exec)
+  "custom/gpu": {
+        "format": "GPU: {}MiB",
+        "exec": "nvidia-smi --query-gpu=memory.used --format=csv,noheader,nounits | awk '{print $1}'",
+        "interval": 2
+      },
+
+  "memory": {
+        "format": "RAM: {}%",
+        "format-alt": "RAM: {used}/{total}G", // Alternate format on scroll/click
+        "interval": 5
+      },
+"mpris": {
+    "format": "󰝚   {title} • {artist}",
+    "format-paused": "   {title} • {artist}",
+    // This allows you to control the player by clicking the center text
+    "on-click": "playerctl play-pause",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous"
+},
+  "custom/notification": {
+      "format": " {}",
+      // SwayNC command to get the current number of unread notifications
+      "exec": "swaync-client -c",
+      // Tooltip to show the current count
+      "tooltip": true,
+      // Interval for checking the count (1 second is responsive)
+      "interval": 1,
+      // When clicked, toggle the notification history window
+      "on-click": "swaync-client -t",
+      // Style when there are unread notifications (count > 0)
+
+      "signal": 1,
+      // Class names for different states (used in CSS)
+      "format-icons": {
+          "default": ""
+    }
+  }
+}

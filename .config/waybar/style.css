@@ -1,0 +1,66 @@
+/* Universal Waybar CSS */
+* {
+    border: none;
+    font-family: "Inter";
+    font-weight: bold;
+    font-size: 12px;
+    color: #eaddff;
+}
+
+/* Waybar Bar */
+window#waybar {
+    background: transparent;
+    margin: 0;
+    padding: 0;
+    border-radius: 0px;
+}
+
+/* Other Modules */
+#clock,
+#custom-calendar,
+#pulseaudio,
+#network,
+#workspaces,
+#tray,
+#memory,
+#cpu,
+#custom-gpu,
+#custom-rofi,
+#custom-nowplaying,
+#mpris,
+#custom-notification {
+    background: #332d41;
+    border: 2px solid #d0bcff;
+    border-radius: 9px;
+    padding: 0 0.6em;
+    margin: 0;
+    margin-right: 4px;
+    margin-top: 8px;
+}
+#clock {
+    margin-left: 8px;
+}
+#custom-notification {
+    margin-right: 8px;
+}
+#memory {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-left: transparent;
+    margin-right: 8px;
+}
+#custom-gpu {
+    border-radius: 0px;
+    border-left: transparent;
+    border-right: transparent;
+    margin-right: 0px;
+    padding-right: 0;
+}
+#cpu {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-right: transparent;
+    margin-right: 0px;
+    padding-right: 0;
+}
+/*#49454f  #1c1b1f*/

@@ -1,0 +1,14 @@
+# Ignore everything by default
+*
+
+# Allow Git to see directories
+!*/
+
+# Track this file
+!.gitignore
+
+# Track our config folders
+!.config/niri/**
+!.config/waybar/**
+!.config/wofi/**
+!.config/swaync/**
