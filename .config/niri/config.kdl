@@ -41,7 +41,7 @@ cursor {
     xcursor-size 20
 }
 layout {
-    gaps 8 // gaps around windows.
+    gaps 0 // gaps around windows.
     center-focused-column "never"
     preset-column-widths { // Widths that "switch-preset-column-width" toggles between.
         proportion 0.33333
@@ -59,7 +59,7 @@ layout {
     border {
         // off
         width 2
-        active-color "#D0BCFF"
+        active-color "#E6E0E9"
         inactive-color "#505050"
         urgent-color "#9b0000" // Border around urgent windows.
     }
@@ -84,7 +84,7 @@ window-rule { // Open the Firefox picture-in-picture player as floating by defau
     // block-out-from "screencast" // Use this instead if you want them visible on third-party screenshot tools.
 }
 window-rule { // Corner Radius
-    geometry-corner-radius 9
+    geometry-corner-radius 8
     clip-to-geometry true
 }
 overview {

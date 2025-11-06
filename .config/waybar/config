@@ -93,7 +93,7 @@
     "on-scroll-down": "playerctl previous"
 },
   "custom/notification": {
-      "format": " {}",
+      "format": "  {}",
       // SwayNC command to get the current number of unread notifications
       "exec": "swaync-client -c",
       // Tooltip to show the current count

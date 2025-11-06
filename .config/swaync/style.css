@@ -1,14 +1,14 @@
 :root {
     /* Colors */
-    --bg-1: #332d41;
-    --bg-2: #332d41;
-    --bg-btn: #332d41;
-    --bg-btn-hover: #332d41;
-    --text: #eaddff;
+    --bg-1: #1d1b20;
+    --bg-2: #1d1b20;
+    --bg-btn: #1d1b20;
+    --bg-btn-hover: #1d1b20;
+    --text: #e6e0e9;
     --text-disabled: #5c554a;
-    --border: #d0bcff;
-    --pri-low: #ebdbb2;
-    --pri-normal: #83a598;
+    --border: #36343b;
+    --pri-low: #36343b;
+    --pri-normal: #36343b;
     --pri-critical: #fb4934;
 
     /* Sizes */
@@ -24,6 +24,8 @@
 /* Base styles */
 * {
     outline: none;
+    font-family: "Inter";
+    font-weight: bold;
 }
 
 *:focus {
@@ -150,7 +152,7 @@ scrollbar slider {
 .notification-content .text-box .summary,
 .notification-content .text-box .time,
 .notification-content .text-box .body {
-    font-size: 12px;
+    font-size: 16px;
     background: transparent;
     color: var(--text);
     text-shadow: none;
@@ -222,12 +224,12 @@ scrollbar slider {
 .notification-action {
     margin: 4px;
     padding: 0;
-    font-size: 12px;
+    font-size: 16px;
 }
 
 .notification-action > button {
     border-radius: var(--radius);
-    font-size: 12px;
+    font-size: 16px;
     padding: 1px;
 }
 
@@ -247,7 +249,7 @@ scrollbar slider {
 }
 
 .notification-group .notification-group-headers {
-    font-size: 12px;
+    font-size: 16px;
     min-width: 10px;
     min-height: 10px;
 }
@@ -255,13 +257,13 @@ scrollbar slider {
 .notification-group .notification-group-headers .notification-group-icon {
     color: var(--text);
     -gtk-icon-size: 20px;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 700;
     margin: 5px 5px 5px 0;
 }
 
 .notification-group .notification-group-headers .notification-group-header {
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 700;
     color: var(--text);
 }
@@ -341,12 +343,12 @@ scrollbar slider {
 .widget-title > label {
     margin: 8px;
     font-weight: 700;
-    font-size: 12px;
+    font-size: 16px;
 }
 
 .widget-title > button {
     margin: 8px;
-    font-size: 12px;
+    font-size: 16px;
     background: var(--bg-1);
     border: var(--border-width) solid var(--text-disabled);
     padding: 3px 10px;
@@ -366,7 +368,7 @@ scrollbar slider {
 .widget-dnd label,
 .widget-label > label {
     color: var(--text);
-    font-size: 12px;
+    font-size: 16px;
 }
 
 /* Do Not Disturb Widget */
@@ -432,11 +434,11 @@ scrollbar slider {
 
 .widget-mpris .widget-mpris-player .mpris-overlay .widget-mpris-title {
     font-weight: bold;
-    font-size: 12px;
+    font-size: 16px;
 }
 
 .widget-mpris .widget-mpris-player .mpris-overlay .widget-mpris-subtitle {
-    font-size: 12px;
+    font-size: 16px;
 }
 
 .widget-mpris .widget-mpris-player .mpris-overlay > box > button {
@@ -525,7 +527,7 @@ scrollbar slider {
 /* Inhibitors Widget */
 .widget-inhibitors > label {
     margin: 8px;
-    font-size: 12px;
+    font-size: 16px;
 }
 
 .widget-inhibitors > button {
