@@ -1,0 +1,8 @@
+[config.wallpaper]
+command = "waypaper"
+arguments = ["--wallpaper"]
+set = true
+
+[templates.waybar]
+input_path = '~/.config/matugen/templates/colors.css'
+output_path = '~/.config/waybar/colors.css'

@@ -1,14 +1,16 @@
 /* Universal Wofi CSS */
 * {
-    font-family: "JetBrains Mono";
-    color: #fffff0;
-    border-color: #fffff0;
-    border-radius: 0;
+    font-family: "Inter";
+    font-weight: bold;
+    color: #e6e0e9;
+    border-color: #36343b;
+    border-radius: 9;
 }
 
 #window {
-    border: 1px solid;
-    background: rgba(0, 0, 0, 1);
+    border: 2px solid #36343b;
+    border-radius: 9;
+    background: #1d1b20;
 }
 
 #scroll {
@@ -26,14 +28,14 @@
 }
 
 #entry:selected {
-    background: #000000;
+    background: #36343b;
     border: 1px solid #303030;
     font-weight: bold;
     outline: none;
 }
 
 #input {
-    background: #000000;
+    background: #1d1b20;
     border: none;
     font-style: normal;
     padding: 2px;
@@ -41,7 +43,7 @@
 }
 
 #input:focus {
-    background: #000000;
+    background: #36343b;
     border-color: #a8a8a8;
     font-style: italic;
 }

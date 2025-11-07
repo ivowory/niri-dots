@@ -8,8 +8,13 @@
 !.gitignore
 
 # Track config
+!.config/fastfetch/**
+!.config/fuzzel/**
+!.config/kitty/**
+!.config/matugen/**
 !.config/niri/**
-!.config/waybar/**
-!.config/wofi/**
 !.config/swaync/**
-!theming/**
+!.config/systemd/**
+!.config/waybar/**
+!.config/waypaper/**
+!.config/zed/**

@@ -7,6 +7,8 @@ prefer-no-csd // Disable Client-Side Decorations
 
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.pn,˙• g"
 
+
+
 input {
     keyboard {
         xkb {}
@@ -31,7 +33,7 @@ input {
 }
 output "HDMI-A-1" {
     mode "1920x1080@74.949"
-    background-color "#1D1B20"
+    background-color "transparent"
     scale 1
     transform "normal"
     position x=0 y=0
@@ -41,7 +43,7 @@ cursor {
     xcursor-size 20
 }
 layout {
-    gaps 0 // gaps around windows.
+    gaps 2 // gaps around windows.
     center-focused-column "never"
     preset-column-widths { // Widths that "switch-preset-column-width" toggles between.
         proportion 0.33333
@@ -87,14 +89,26 @@ window-rule { // Corner Radius
     geometry-corner-radius 8
     clip-to-geometry true
 }
+layer-rule {
+    match namespace="^swww-daemon$"
+    place-within-backdrop true
+}
+window-rule {
+    match app-id="kitty"
+    opacity 0.85
+}
 overview {
     zoom 0.75
-    backdrop-color "#0F0D13"
+    backdrop-color "transparent"
+    workspace-shadow {
+            off
+        }
+
 }
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; } // important hotkeys.
 
-    Mod+R hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
+    Mod+R hotkey-overlay-title="Run an Application: vicinae" { spawn "fuzzel"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
     Mod+Tab repeat=false { toggle-overview; } // Open/close the Overview
