@@ -7,8 +7,6 @@ prefer-no-csd // Disable Client-Side Decorations
 
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.pn,˙• g"
 
-
-
 input {
     keyboard {
         xkb {}
@@ -43,7 +41,7 @@ cursor {
     xcursor-size 20
 }
 layout {
-    gaps 2 // gaps around windows.
+    gaps 4 // gaps around windows.
     center-focused-column "never"
     preset-column-widths { // Widths that "switch-preset-column-width" toggles between.
         proportion 0.33333
@@ -52,18 +50,17 @@ layout {
         // fixed 1920
     }
 
-    default-column-width { proportion 0.5; } // Default width of new windows (empty = windows decide)
+    default-column-width {} // Default width of new windows (empty = windows decide)  proportion 0.75;
 
     focus-ring {
         off
     }
 
     border {
-        // off
         width 2
-        active-color "#E6E0E9"
-        inactive-color "#505050"
-        urgent-color "#9b0000" // Border around urgent windows.
+        active-color "#606060"    // dark gray for active windows
+        inactive-color "#404040"  // muted gray for inactive windows
+        urgent-color "#808080"    // neutral gray for urgent windows
     }
 
 }
@@ -71,12 +68,19 @@ animations {
     // off
     // slowdown 3.0
 }
-
+window-rule {
+    match app-id=r#"^vesktop$"#
+    block-out-from "screen-capture"
+}
+window-rule {
+    match app-id=r#"^vesktop$"#
+    block-out-from "screencast"
+}
 window-rule { // Open the Firefox picture-in-picture player as floating by default.
     // This app-id regular expression will work for both:
     // - host Firefox (app-id is "firefox")
     // - Flatpak Firefox (app-id is "org.mozilla.firefox")
-    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    match app-id=r#"librewolf$"# title="^Picture-in-Picture$"
     open-floating true
 }
 /-window-rule { // Example: block out two password managers from screen capture.
@@ -86,7 +90,7 @@ window-rule { // Open the Firefox picture-in-picture player as floating by defau
     // block-out-from "screencast" // Use this instead if you want them visible on third-party screenshot tools.
 }
 window-rule { // Corner Radius
-    geometry-corner-radius 8
+    geometry-corner-radius 0
     clip-to-geometry true
 }
 layer-rule {

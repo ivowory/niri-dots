@@ -8,13 +8,13 @@
   "layer-shell": true,
   "layer-shell-cover-screen": true,
   "cssPriority": "user",
-  "control-center-margin-top": 15,
-  "control-center-margin-bottom": 15,
-  "control-center-margin-right": 8,
+  "control-center-margin-top": 0,
+  "control-center-margin-bottom": 250,
+  "control-center-margin-right": 0,
   "control-center-margin-left": 0,
   "notification-2fa-action": true,
   "notification-inline-replies": false,
-  "notification-body-image-height": 160,
+  "notification-body-image-height": 200,
   "notification-body-image-width": 200,
   "timeout": 10,
   "timeout-low": 5,
@@ -60,7 +60,7 @@
     "title": {
       "text": "Notifications",
       "clear-all-button": true,
-      "button-text": "Clear All"
+      "button-text": "Clear"
     },
     "dnd": {
       "text": "Do Not Disturb"
@@ -74,7 +74,7 @@
       "loop-carousel": false
     },
     "buttons-grid": {
-      "buttons-per-row": 4,
+      "buttons-per-row": 5,
       "actions": [
         {
           "label": "",
@@ -94,24 +94,9 @@
           "label": "󰂯",
           "command": "blueman-manager"
         },
-
-        {
-          "label": "󱡽",
-          "command": "bash -c $HOME/.config/hypr/scripts/airplaneMode.sh",
-          "type": "toggle"
-        },
         {
           "label": "",
           "command": "shutdown now"
-        },
-
-        {
-          "label": "",
-          "command": "hyprlock"
-        },
-        {
-          "label": "",
-          "command": "~/.config/hypr/scripts/wlogout.sh"
         }
       ]
     }

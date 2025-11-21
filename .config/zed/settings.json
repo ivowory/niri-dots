@@ -7,6 +7,9 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "active_pane_modifiers": {
+    "border_size": 0.0
+  },
   "agent": {
     "default_model": {
       "provider": "ollama",

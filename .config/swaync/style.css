@@ -1,16 +1,17 @@
+@import url("colors.css");
+
 :root {
     /* Colors */
-    --bg-1: #1d1b20;
-    --bg-2: #1d1b20;
-    --bg-btn: #1d1b20;
-    --bg-btn-hover: #1d1b20;
-    --text: #e6e0e9;
-    --text-disabled: #5c554a;
-    --border: #36343b;
-    --pri-low: #36343b;
-    --pri-normal: #36343b;
-    --pri-critical: #fb4934;
-
+    --bg-1: var(--surface_container);
+    --bg-2: var(--surface_container_highest);
+    --bg-btn: var(--surface);
+    --bg-btn-hover: var(--surface_bright);
+    --text: var(--on_surface);
+    --text-disabled: var(--on_surface_variant);
+    --border: var(--outline);
+    --pri-low: var(--surface_variant);
+    --pri-normal: var(--primary);
+    --pri-critical: var(--error);
     /* Sizes */
     --radius: 9px;
     --border-width: 2px;
@@ -89,18 +90,6 @@ scrollbar slider {
     transition: background var(--transition);
     background: var(--bg-1);
     padding: 2px 4px;
-}
-
-.notification-row .notification-background .notification.low {
-    border-left: 3px solid var(--pri-low);
-}
-
-.notification-row .notification-background .notification.normal {
-    border-left: 3px solid var(--pri-normal);
-}
-
-.notification-row .notification-background .notification.critical {
-    border-left: 3px solid var(--pri-critical);
 }
 
 .notification-default-action {
@@ -299,8 +288,8 @@ scrollbar slider {
 .control-center {
     background: var(--bg-1);
     color: var(--text);
-    border-radius: var(--radius);
-    border: var(--border-width) solid var(--border);
+    border-radius: 0;
+    border-bottom-left-radius: 12px;
     box-shadow: var(--shadow);
 }
 

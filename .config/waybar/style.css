@@ -11,7 +11,7 @@
 
 /* Waybar Bar */
 window#waybar {
-    background: transparent;
+    background: @surface_container;
     margin: 0;
     padding: 0;
     border-radius: 0px;
@@ -47,7 +47,7 @@ window#waybar {
     margin-left: 0;
 }
 #clock {
-    margin-left: 4px;
+    margin-left: 6px;
     border-bottom-right-radius: 0px;
     border-top-right-radius: 0px;
     margin-right: 0;
@@ -57,12 +57,14 @@ window#waybar {
     margin-right: 4px;
 }
 #memory {
+    color: @on_surface_variant;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
     border-left: transparent;
     margin-right: 8px;
 }
 #custom-gpu {
+    color: @on_surface_variant;
     border-radius: 0px;
     border-left: transparent;
     border-right: transparent;
@@ -70,6 +72,7 @@ window#waybar {
     padding-right: 0;
 }
 #cpu {
+    color: @on_surface_variant;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
     border-right: transparent;
