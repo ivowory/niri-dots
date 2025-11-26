@@ -18,3 +18,8 @@
 !.config/waybar/**
 !.config/waypaper/**
 !.config/zed/**
+!.config/tinte/**
+!.config/wlogout/**
+!.config/gtk/**
+!.config/vesktop/themes/**
+!.config/wlogout/**
