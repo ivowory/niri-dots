@@ -95,8 +95,8 @@
           "command": "blueman-manager"
         },
         {
-          "label": "",
-          "command": "shutdown now"
+          "label": "󰍃",
+          "command": "wlogout"
         }
       ]
     }
