@@ -44,3 +44,11 @@ output_path = '~/.config/niri/colors.kdl'
 [templates.wlogout]
 input_path = '~/.config/matugen/templates/wlogout/colors.css'
 output_path = '~/.config/wlogout/colors.css'
+
+[templates.color-scheme]
+input_path = '~/.config/matugen/templates/qtct/Matugen.colors'
+output_path = '~/.local/share/color-schemes/Matugen.colors'
+
+[templates.prismlauncher]
+input_path = '~/.config/matugen/templates/prismlauncher/Matugen.json'
+output_path = '~/.local/share/PrismLauncher/themes/Matugen/theme.json'

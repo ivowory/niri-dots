@@ -23,3 +23,6 @@
 !.config/gtk/**
 !.config/vesktop/themes/**
 !.config/wlogout/**
+!.config/qt5ct/**
+!.config/qt6ct/**
+!.local/share/**
