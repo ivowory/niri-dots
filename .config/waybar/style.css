@@ -22,19 +22,17 @@ window#waybar {
 #custom-calendar,
 #pulseaudio,
 #network,
-#workspaces,
 #tray,
 #memory,
 #cpu,
 #custom-gpu,
-#custom-rofi,
-#custom-nowplaying,
 #mpris,
 #custom-notification,
 #custom-prev,
 #custom-next,
 #custom-playpause,
-#custom-wlogout {
+#custom-wlogout,
+#custom-todo {
     background: @surface_container_highest;
     border-radius: 12px;
     padding: 0 0.7em;
@@ -45,9 +43,7 @@ window#waybar {
 }
 
 #custom-todo {
-    background: @surface_container_highest;
     color: @on_surface_variant;
-    border-radius: 12px;
 }
 
 #custom-playpause {
