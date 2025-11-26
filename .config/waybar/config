@@ -12,8 +12,7 @@
 /* Module Placement */
   "modules-left": ["clock", "custom/calendar"],
   "modules-center": ["mpris"],
-  "modules-right": [ "cpu", "custom/gpu" , "memory","network", "pulseaudio", "tray", "custom/notification"],
-
+  "modules-right": ["network", "pulseaudio", "tray", "custom/notification"],
 
 /* App launcher / Taskbar Modules */
  "custom/rofi": {
