@@ -10,95 +10,105 @@
   "reload_style_on_change": true,
 
 /* Module Placement */
-  "modules-left": ["clock", "custom/calendar"],
-  "modules-center": ["mpris"],
+  "modules-left": ["clock", "custom/calendar", "custom/todo"],
+  "modules-center": ["mpris", "custom/prev", "custom/playpause", "custom/next"],
   "modules-right": ["network", "pulseaudio", "tray", "custom/notification"],
 
-/* App launcher / Taskbar Modules */
- "custom/rofi": {
-	"format": "Run",
-	"on-click": "wofi --show drun"
-  },
-    "window": {
-        "format": "{}",
-        "max-length": 80,
-        "tooltip": true,
-        "tooltip-format": "{}"
-    },
-  "niri/workspaces": {
-    "on-click": "activate"
-  },
-
-  "wlr/taskbar": {
-    "format": "{icon} {app_id}",
+/* Planify */
+  "custom/todo": {
+    "format": "   todo",
     "icon-size": 16,
-    "on-click": "minimize-raise"
+    "on-click": "planify.quick-add",
+    "on-click-right-release": "planify"
   },
 
-/* Network Waybar Module */
+/* Network */
   "network": {
-	"interval": 1,
-  "format-disconnected": "lf network",
-  "tooltip-format-ethernet": "󰈀   Ethernet\nIP: {ipaddr}",
-	"format-ethernet": "󰕒  {bandwidthUpBytes}  󰇚  {bandwidthDownBytes}",
-	"on-click-right-release": "nm-connection-editor"
+    "interval": 1,
+    "format-disconnected": "lf network",
+    "tooltip-format-ethernet": "󰕒  {bandwidthUpBytes}  󰇚  {bandwidthDownBytes}\nIP: {ipaddr}",
+    "format-ethernet": "󰈀   Ethernet",
+    "on-click-right-release": "nm-connection-editor"
   },
 
-/* Media Waybar Modules */
+/* Media */
   "pulseaudio": {
     "format": "󰕾  {volume}",
     "on-click": "pavucontrol"
   },
-
-/* Clock Module */
-  "clock": {
-    "format": "{:%I:%M %p}"
-    },
-
-    "custom/calendar": {
-        "exec": "date '+%a, %b %d'",
-        "interval": 60
-    },
-
-/* System Tray Module */
-  "tray": {
-    "icon-size": 14,
-    "spacing": 5,
-	"show-passive-items": true
-  },
-
-  "cpu": {
-      "format": "CPU: {usage}%",
-      "interval": 2
-  },
-
-  "custom/gpu": {
-        "format": "GPU: {}MiB",
-        "exec": "nvidia-smi --query-gpu=memory.used --format=csv,noheader,nounits | awk '{print $1}'",
-        "interval": 2
-      },
-
-  "memory": {
-        "format": "RAM: {}%",
-        "format-alt": "RAM: {used}/{total}G",
-        "interval": 5
-      },
-"mpris": {
-    "format": "󰝚   {title} • {artist}",
-    "format-paused": "   {title} • {artist}",
+  "mpris": {
+    "format": "{title} • {artist}",
+    "format-paused": "{title} • {artist}",
     "on-click": "playerctl play-pause",
     "on-scroll-up": "playerctl next",
     "on-scroll-down": "playerctl previous"
-},
-  "custom/notification": {
-      "format": "  {}",
-      "exec": "swaync-client -c",
-      "tooltip": true,
+  },
+  "custom/prev": {
+      "exec": "echo ''",
+      "on-click": "playerctl previous",
+      "tooltip": false
+  },
+  "custom/playpause": {
+      "exec": "playerctl status | grep -q Playing && echo '' || echo ''",
+      "on-click": "playerctl play-pause",
       "interval": 1,
-      "on-click": "swaync-client -t",
-      "signal": 1,
-      "format-icons": {
-          "default": ""
+      "tooltip": false
+  },
+  "custom/next": {
+      "exec": "echo ''",
+      "on-click": "playerctl next",
+      "tooltip": false
+  },
+
+  "custom/wlogout": {
+    "format": "󰍃",
+    "on-click": "wlogout"
+  },
+
+  "custom/notification": {
+    "format": "  {}",
+    "exec": "swaync-client -c",
+    "tooltip": true,
+    "interval": 1,
+    "on-click": "swaync-client -t",
+    "signal": 1,
+    "format-icons": {
+    "default": ""
     }
+  },
+
+/* Clock and Calendar */
+  "clock": {
+    "format": "{:%I:%M %p}",
+    "on-click": "gnome-clocks"
+  },
+  "custom/calendar": {
+    "exec": "date '+%a, %b %d'",
+    "interval": 60,
+    "on-click": "gnome-calendar"
+
+  },
+
+/* System Tray */
+  "tray": {
+    "icon-size": 14,
+    "spacing": 5,
+    "show-passive-items": true
+  },
+
+/* System Resource usage */
+  "cpu": {
+    "format": "CPU: {usage}%",
+    "interval": 2
+  },
+  "custom/gpu": {
+    "format": "GPU: {}MiB",
+    "exec": "nvidia-smi --query-gpu=memory.used --format=csv,noheader,nounits | awk '{print $1}'",
+    "interval": 2
+  },
+  "memory": {
+    "format": "RAM: {}%",
+    "format-alt": "RAM: {used}/{total}G",
+    "interval": 5
   }
 }

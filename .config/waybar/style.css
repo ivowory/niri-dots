@@ -30,7 +30,11 @@ window#waybar {
 #custom-rofi,
 #custom-nowplaying,
 #mpris,
-#custom-notification {
+#custom-notification,
+#custom-prev,
+#custom-next,
+#custom-playpause,
+#custom-wlogout {
     background: @surface_container_highest;
     border-radius: 12px;
     padding: 0 0.7em;
@@ -38,6 +42,26 @@ window#waybar {
     margin-right: 4px;
     margin-top: 4px;
     margin-bottom: 4px;
+}
+
+#custom-todo {
+    background: @surface_container_highest;
+    color: @on_surface_variant;
+    border-radius: 12px;
+}
+
+#custom-playpause {
+    padding: 0 0.7em;
+    margin-right: 2px;
+    margin-left: 2px;
+}
+
+#custom-next {
+    padding: 0 0.7em;
+}
+#custom-prev {
+    padding: 0 0.7em;
+    margin-right: 0px;
 }
 
 #custom-calendar {
