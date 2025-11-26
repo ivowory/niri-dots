@@ -1,0 +1,15 @@
+//========================
+// Window rules
+//========================
+window-rule {
+    match app-id=r#"^vesktop$"#
+    block-out-from "screen-capture"
+}
+window-rule {
+    match app-id=r#"librewolf$"# title="^Picture-in-Picture$"
+    open-floating true
+}
+window-rule {
+    match app-id="kitty"
+    opacity 0.85
+}

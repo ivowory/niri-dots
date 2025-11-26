@@ -1,0 +1,5 @@
+// ========================
+// Startup / Daemons
+// ========================
+spawn-at-startup "xdg-desktop-portal"
+spawn-at-startup "xdg-desktop-portal-gnome"

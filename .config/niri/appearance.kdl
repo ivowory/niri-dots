@@ -1,0 +1,56 @@
+//========================
+// Appearance
+//========================
+prefer-no-csd
+
+cursor {
+    xcursor-theme "Bibata-Modern-Classic"
+    xcursor-size 20
+}
+
+layout {
+    background-color "transparent"
+    gaps 4
+
+    border {
+        on
+        width 2
+    }
+
+    focus-ring {
+        off
+    }
+
+    center-focused-column "never"
+
+    preset-column-widths { // Widths that "switch-preset-column-width" toggles between.
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+        // fixed 1920
+    }
+
+    default-column-width {}
+
+}
+
+window-rule { // Corner Radius
+    geometry-corner-radius 0
+    clip-to-geometry true
+}
+animations {}
+
+//========================
+// Overview
+//========================
+layer-rule {
+    match namespace="^swww-daemon$"
+    place-within-backdrop true
+}
+overview {
+    zoom 0.7
+    backdrop-color "transparent"
+    workspace-shadow {
+            off
+        }
+}
