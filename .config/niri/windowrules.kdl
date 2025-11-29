@@ -13,3 +13,9 @@ window-rule {
     match app-id="kitty"
     opacity 0.85
 }
+
+window-rule {
+    match app-id="krita"
+    clip-to-geometry false
+    geometry-corner-radius 0
+}
