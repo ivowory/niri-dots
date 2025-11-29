@@ -35,6 +35,7 @@
 
       // Info
       "~/.config/waybar/modules/info/audio.jsonc",
+      "~/.config/waybar/modules/info/battery.jsonc",
       "~/.config/waybar/modules/info/network.jsonc",
       "~/.config/waybar/modules/info/notifications.jsonc",
       "~/.config/waybar/modules/info/tray.jsonc",
