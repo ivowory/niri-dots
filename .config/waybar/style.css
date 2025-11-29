@@ -33,7 +33,8 @@ window#waybar {
 #custom-playpause,
 #custom-wlogout,
 #custom-todo,
-#window {
+#window,
+#battery {
     background: @surface_container_high;
     border-radius: 12px;
     padding: 0 0.7em;
