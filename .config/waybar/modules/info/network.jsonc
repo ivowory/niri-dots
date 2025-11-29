@@ -1,0 +1,9 @@
+{
+  "network": {
+  "interval": 1,
+  "format-disconnected": "lf network",
+  "tooltip-format-ethernet": "󰕒  {bandwidthUpBytes}  󰇚  {bandwidthDownBytes}\nIP: {ipaddr}",
+  "format-ethernet": "󰈀   Ethernet",
+  "on-click-right-release": "nm-connection-editor"
+  }
+}
