@@ -1,15 +1,22 @@
-include "colors.kdl"
-include "autostart.kdl"
-include "inputs.kdl"
-include "monitors.kdl"
-include "appearance.kdl"
+// Main Config
 
-include "windowrules.kdl"
+// Startup programs and other environment-related config
+include "environment.kdl"
+
+// Input devices
+include "inputs.kdl"
+
+// Keybinds
 include "binds.kdl"
 
+// Monitor config
+include "monitors.kdl"
 
+// Window Rules
+include "windowrules.kdl"
 
-//========================
-// Screenshots
-//========================
-screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.pn,˙• g"
+// Matugen colors for borders
+include "colors.kdl"
+
+// Appearence
+include "appearance.kdl"

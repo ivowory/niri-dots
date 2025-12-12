@@ -11,8 +11,8 @@
 
   // Module Placement
   "modules-left": ["clock", "custom/calendar", "custom/todo", "niri/window"],
-  "modules-center": ["mpris", "custom/prev", "custom/playpause", "custom/next"],
-  "modules-right": ["network", "pulseaudio", "tray", "custom/notification"],
+  "modules-center": ["mpris"], //, "custom/prev", "custom/playpause", "custom/next"
+  "modules-right": ["cpu", "custom/gpu", "memory", "pulseaudio", "tray", "custom/notification"],
 
   "include": [
       // Resources

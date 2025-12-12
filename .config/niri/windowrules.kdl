@@ -1,19 +1,28 @@
-//========================
 // Window rules
-//========================
+
+// Hide Programs from Screenshare
+window-rule {
+    match app-id=r#"^discord$"#
+    block-out-from "screen-capture"
+}
 window-rule {
     match app-id=r#"^vesktop$"#
     block-out-from "screen-capture"
 }
+
+// Browser picture-in-picture
 window-rule {
-    match app-id=r#"librewolf$"# title="^Picture-in-Picture$"
+    match app-id=r#"zen$"# title="^Picture-in-Picture$"
     open-floating true
 }
+
+// Opacity Workaround for terminal
 window-rule {
     match app-id="kitty"
     opacity 0.85
 }
 
+// Program-specific border radius
 window-rule {
     match app-id="krita"
     clip-to-geometry false

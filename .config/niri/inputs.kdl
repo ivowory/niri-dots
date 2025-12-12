@@ -1,6 +1,5 @@
-//========================
 // Inputs
-//========================
+
 input {
     keyboard {
         xkb {
@@ -13,6 +12,6 @@ input {
         natural-scroll
     }
     mouse {
-         accel-profile "flat"
+        accel-profile "flat"
     }
 }

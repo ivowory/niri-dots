@@ -1,7 +1,7 @@
 layout {
     border {
-        active-color "#8d9199"
-        inactive-color "#42474e"
-        urgent-color "#9fcafd"
+        active-color "#89938f"
+        inactive-color "#3f4946"
+        urgent-color "#84d6c2"
     }
 }
