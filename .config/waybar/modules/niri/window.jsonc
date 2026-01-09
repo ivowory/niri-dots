@@ -2,7 +2,7 @@
   "niri/window": {
     "rewrite": {
       "kitty": "Terminal",
-      "(.*)zen": "Zen Browser",
+      "librewolf": "LibreWolf",
       "dev.zed.Zed": "Zed",
       "org.gnome.Nautilus": "Files",
       "com.usebottles.bottles": "Bottles",
@@ -12,7 +12,6 @@
       "org.gnome.Calendar": "Calendar",
       "org.gnome.Loupe": "Image Viewer",
       "org.gnome.Papers": "Document Viewer",
-      "org.tinte.Tinte": "Themes",
       "org.gnome.TextEditor": "Text Editor",
       "org.pulseaudio.pavucontrol": "Audio Mixer",
       "org.prismlauncher.PrismLauncher": "Prism Launcher",

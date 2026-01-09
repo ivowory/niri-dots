@@ -1,8 +1,0 @@
-{
-  "wallpaperFolder": "/home/ivory/dotfiles/Wallpapers",
-  "posthookScript": "",
-  "exportThemeLocation": "/home/ivory/.config/tinte/themes",
-  "applyThemeLocation": "/home/ivory/.config/tinte",
-  "colorBackend": "matugen",
-  "wallpaperBackend": "swaybg"
-}

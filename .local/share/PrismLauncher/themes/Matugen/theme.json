@@ -1,20 +1,20 @@
 {
   "colors": {
-    "AlternateBase": "#3f4946",
-    "Base": "#0e1513",
+    "AlternateBase": "#41484d",
+    "Base": "#101417",
     "BrightText": "#ffb4ab",
-    "Button": "#171d1b",
-    "ButtonText": "#dee4e0",
-    "Highlight": "#84d6c2",
-    "HighlightedText": "#dee4e0",
-    "Link": "#84d6c2",
-    "Text": "#dee4e0",
-    "ToolTipBase": "#171d1b",
-    "ToolTipText": "#dee4e0",
-    "Window": "#0e1513",
-    "WindowText": "#dee4e0",
+    "Button": "#181c20",
+    "ButtonText": "#dfe3e7",
+    "Highlight": "#92cef6",
+    "HighlightedText": "#dfe3e7",
+    "Link": "#92cef6",
+    "Text": "#dfe3e7",
+    "ToolTipBase": "#181c20",
+    "ToolTipText": "#dfe3e7",
+    "Window": "#101417",
+    "WindowText": "#dfe3e7",
     "fadeAmount": 0.5,
-    "fadeColor": "#0e1513"
+    "fadeColor": "#101417"
   },
   "name": "Matugen Dark",
   "widgets": "Fusion"

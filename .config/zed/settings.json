@@ -7,6 +7,7 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "disable_ai": true,
   "languages": {
     "JSONC": {
       "format_on_save": "off"
@@ -21,6 +22,7 @@
     "border_size": 0.0
   },
   "agent": {
+    "always_allow_tool_actions": true,
     "default_model": {
       "provider": "ollama",
       "model": "opencoder:1.5b"

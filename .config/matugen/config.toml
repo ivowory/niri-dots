@@ -52,3 +52,16 @@ output_path = '~/.local/share/color-schemes/Matugen.colors'
 [templates.prismlauncher]
 input_path = '~/.config/matugen/templates/prismlauncher/Matugen.json'
 output_path = '~/.local/share/PrismLauncher/themes/Matugen/theme.json'
+
+[templates.pywalfox]
+input_path = '~/.config/matugen/templates/pywalfox/colors.json'
+output_path = '~/.cache/wal/colors.json'
+post_hook = 'pywalfox update'
+
+[templates.starship]
+input_path = '~/.config/matugen/templates/starship/colors.toml'
+output_path = '~/.config/starship.toml'
+
+[templates.quickshell]
+input_path = '~/.config/matugen/templates/quickshell/colors.qml'
+output_path = '~/.config/quickshell/Common/Colors.qml'
