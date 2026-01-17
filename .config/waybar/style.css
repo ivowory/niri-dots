@@ -1,5 +1,3 @@
-/* Universal Waybar CSS */
-
 @import "colors.css";
 * {
     border: none;
@@ -9,15 +7,13 @@
     color: @on_surface;
 }
 
-/* Waybar Bar */
 window#waybar {
-    background: @surface;
+    background: @surface_semitransparent;
     margin: 0;
     padding: 0;
     border-radius: 0px;
 }
 
-/* Other Modules */
 #clock,
 #custom-calendar,
 #pulseaudio,
@@ -25,8 +21,7 @@ window#waybar {
 #tray,
 #mpris,
 #custom-notification,
-#window
-{
+#window {
     background: @surface_container_high;
     border-radius: 12px;
     padding: 0 0.7em;
@@ -41,6 +36,7 @@ window#waybar {
     border-bottom-left-radius: 0px;
     border-top-left-radius: 0px;
     margin-left: 0;
+    border-left: 0px;
 }
 #clock {
     margin-left: 6px;
@@ -48,8 +44,8 @@ window#waybar {
     border-top-right-radius: 0px;
     margin-right: 0;
     padding-right: 0;
+    border-right: 0px;
 }
 #custom-notification {
     margin-right: 4px;
 }
-

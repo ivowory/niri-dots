@@ -1,5 +1,4 @@
 {
-  // General
   "layer": "top",
   "position": "top",
   "height": 30,
@@ -9,39 +8,18 @@
   "style": "~/.config/waybar/colors.css",
   "reload_style_on_change": true,
 
-  // Module Placement
   "modules-left": ["clock", "custom/calendar", "niri/window"],
-  "modules-center": ["mpris"], //, "custom/prev", "custom/playpause", "custom/next"
+  "modules-center": ["mpris"],
   "modules-right": ["network","pulseaudio", "tray", "custom/notification"],
 
   "include": [
-      // Resources
-      "~/.config/waybar/modules/resources/cpu.jsonc",
-      "~/.config/waybar/modules/resources/gpu.jsonc",
-      "~/.config/waybar/modules/resources/memory.jsonc",
-
-      // Time
-      "~/.config/waybar/modules/time/clock.jsonc",
-      "~/.config/waybar/modules/time/calendar.jsonc",
-
-      // Media
-      "~/.config/waybar/modules/media/mpris.jsonc",
-      "~/.config/waybar/modules/media/controls/play-pause.jsonc",
-      "~/.config/waybar/modules/media/controls/forward.jsonc",
-      "~/.config/waybar/modules/media/controls/rewind.jsonc",
-
-      // Niri
+      "~/.config/waybar/modules/clock.jsonc",
+      "~/.config/waybar/modules/calendar.jsonc",
+      "~/.config/waybar/modules/mpris.jsonc",
       "~/.config/waybar/modules/niri/window.jsonc",
-
-      // Info
-      "~/.config/waybar/modules/info/audio.jsonc",
-      "~/.config/waybar/modules/info/battery.jsonc",
-      "~/.config/waybar/modules/info/network.jsonc",
-      "~/.config/waybar/modules/info/notifications.jsonc",
-      "~/.config/waybar/modules/info/tray.jsonc",
-
-      // Custom
-      "~/.config/waybar/modules/custom/todo.jsonc",
-      "~/.config/waybar/modules/custom/wlogout.jsonc"
+      "~/.config/waybar/modules/audio.jsonc",
+      "~/.config/waybar/modules/network.jsonc",
+      "~/.config/waybar/modules/notifications.jsonc",
+      "~/.config/waybar/modules/tray.jsonc",
     ]
 }
